@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 MAINTAINER Per-Gustaf Stenberg
 
-RUN apt-get update && apt-get -y install software-properties-common \
+RUN apt-get update && apt-get -y install software-properties-common curl \
 && add-apt-repository ppa:webupd8team/java && apt-get update \
 && echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections \
 && echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections \
